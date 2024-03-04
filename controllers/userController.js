@@ -109,8 +109,8 @@ module.exports = {
           .json({ message: "No friend found with that ID" });
       }
 
-     // res.json({ message: "Friend successfully deleted" });
-     res.json(user);
+     res.json({ message: "Friend successfully deleted" });
+     //res.json(user);
     } catch (err) {
       res.status(500).json(err);
     }
