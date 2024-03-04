@@ -1,5 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
-const userSchema = require('./User');
+//const userSchema = require('./User');
 const dateFormat = require('../utils/dateFormat');
 
 const reactionSchema = new Schema(
@@ -20,7 +20,7 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            //get: (createdAtTime) => dateFormat(createdAtTime),
+            get: (createdAtTime) => dateFormat(createdAtTime),
         },
     }
 );
@@ -35,7 +35,7 @@ const thoughtSchema = new Schema(
       createdAt: {
         type: Date,
         default: Date.now,
-        //get: (createdAtTime) => dateFormat(createdAtTime),
+        get: (createdAtTime) => dateFormat(createdAtTime),
       },
       reactions: [reactionSchema],
     },
