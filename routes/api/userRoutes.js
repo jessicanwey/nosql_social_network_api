@@ -23,10 +23,10 @@ const {
     .delete(deleteUser);
   
   // /api/users/:id/friends
-  router.route('/:id/friends').post(addFriend);
+  router.route('/:id/friends/:friendId').put(addFriend);
   
   // /api/users/:id/assignments/:friendsId
-  router.route('/:id/friends/:friendsId').delete(removeFriend);
+  router.route('/:id/friends/:friendId').delete(removeFriend);
   
   module.exports = router;
   
